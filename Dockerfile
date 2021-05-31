@@ -6,7 +6,8 @@ RUN mkdir /root/go
 RUN apt-get update -y -q && \
     apt-get install -y -q bash git python3 wget
 RUN wget -q https://golang.org/dl/go1.16.4.linux-amd64.tar.gz && \
-    tar -C /usr/local -xzf go1.16.4.linux-amd64.tar.gz 
+    tar -C /usr/local -xzf go1.16.4.linux-amd64.tar.gz
+RUN go env 
 COPY app /
 RUN ls -la /scripts
 ENTRYPOINT ["/scripts/entrypoint.sh"]
