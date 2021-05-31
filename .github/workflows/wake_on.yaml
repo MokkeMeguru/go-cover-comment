@@ -11,7 +11,7 @@ jobs:
         with:
           go-version: "^1.16"
       - run: |
-          echo "go version: ${go version}"
+          echo "go version: $(go version)"
       - name: Wake On
         uses: ./
         id: wake_on
