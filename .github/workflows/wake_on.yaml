@@ -14,4 +14,4 @@ jobs:
         uses: ./
         id: wake_on
       - name: Get the pokemon
-        run: echo "${{ steps.pokemon.outputs.pokemon_name }} attack"
+        run: echo "${{ steps.wake_on.outputs.pokemon_name }} attack"
