@@ -7,7 +7,7 @@ inputs:
     default: ""
 runs:
   using: "docker"
-  image: "dockerfile"
+  image: "Dockerfile"
   args:
     - ${{ inputs.exclude-regexes }}
 branding:
