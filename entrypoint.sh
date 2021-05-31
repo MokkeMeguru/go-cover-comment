@@ -1,5 +1,5 @@
-#!/usr/bin/env bash
-set -euo pipefail
+#!/bin/bash
+set -e
 
 exec 1> >(
   while read -r l; do echo "[$(date +"%Y-%m-%d %H:%M:%S")] $l"; done \

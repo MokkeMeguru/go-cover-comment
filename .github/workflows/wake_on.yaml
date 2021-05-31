@@ -9,6 +9,7 @@ jobs:
           fetch-depth: 0
       - name: ls
         run: ls -la
+        id: ls
       - name: Wake On
         uses: ./
         id: wake_on
