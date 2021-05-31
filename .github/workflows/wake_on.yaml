@@ -7,11 +7,15 @@ jobs:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
+      - uses: actions/setup-go@v2
+        with:
+          go-version: "^1.16"
+      - run: go version
       - name: ls
         run: ls -la
         id: ls
       - name: Wake On
         uses: ./
         id: wake_on
-      - name: Get the pokemon
-        run: echo "${{ steps.wake_on.outputs.pokemon_name }} attack"
+        with:
+          exclude-regexes: "hello nice to meet you"

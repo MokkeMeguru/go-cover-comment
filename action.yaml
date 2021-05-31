@@ -1,18 +1,16 @@
 name: "Go Coverage Commenter"
 description: "Put the coverage comment in your golang project's PR"
+author: "MokkeMeguru <meguru.mokke@gmail.com>"
+branding:
+  icon: "aperture"
+  color: "blue"
 inputs:
   exclude-regexes:
     description: "exclude-regexes separated by space"
     required: false
     default: ""
-outputs:
-  pokemon_name:
-    description: "Name of pokemon"
 runs:
   using: "docker"
-  image: "Dockerfile"
+  main: "Dockerfile"
   args:
     - ${{ inputs.exclude-regexes }}
-branding:
-  icon: "book"
-  color: "blue"

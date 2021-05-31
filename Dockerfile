@@ -1,6 +1,6 @@
 FROM ubuntu:latest
-RUN apt -y update && \
-   apt -y install jq curl
-COPY entrypoint.sh /entrypoint.sh
-RUN chmod +x /entrypoint.sh
-ENTRYPOINT ["/entrypoint.sh"]
+RUN apt-get -y update && \
+   apt-get -y install jq curl
+COPY app/ /
+RUN chmod +x /scripts/entrypoint.sh
+ENTRYPOINT ["/scripts/entrypoint.sh"]
