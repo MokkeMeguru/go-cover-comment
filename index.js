@@ -1,5 +1,6 @@
 const core = require("@actions/core")
 const github = require("@actions/github")
+const exec = require("@actions/exec")
 
 function run() {
     return new Promise(async (resolve, reject) => {
@@ -9,7 +10,7 @@ function run() {
         const exclude_regrexes = core.getInput("exclude-regrexes")
         let result = 1;
         try {
-            result = await exec("/app/scripts/entrypoint.sh", [repository, head_ref, base_ref, exclude_regrexes]);
+            result = await exec.exec("/app/scripts/entrypoint.sh", [repository, head_ref, base_ref, exclude_regrexes]);
             if (result !== 0) {
                 throw new Error(`unknown error ${result}`);
             }
