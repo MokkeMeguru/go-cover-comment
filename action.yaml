@@ -1,6 +1,10 @@
 # action.yml
-name: "Hello World"
-description: "Greet someone and record the time"
+name: "Go Coverage Commenter"
+description: "Put the coverage comment in your golang project's PR"
+author: "MokkeMeguru <meguru.mokke@gmail.com>"
+branding:
+  icon: "aperture"
+  color: "blue"
 inputs:
   who-to-greet: # id of input
     description: "Who to greet"
