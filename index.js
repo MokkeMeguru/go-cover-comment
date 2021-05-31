@@ -14,7 +14,7 @@ function run() {
                 throw new Error(`unknown error ${result}`);
             }
         } catch (err) {
-            error(err.message);
+            core.setFailed(err.message);
         }
     })
 }
