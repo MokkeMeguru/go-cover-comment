@@ -1,16 +1,16 @@
-name: "Go Coverage Commenter"
-description: "Put the coverage comment in your golang project's PR"
-author: "MokkeMeguru <meguru.mokke@gmail.com>"
-branding:
-  icon: "aperture"
-  color: "blue"
+# action.yml
+name: "Hello World"
+description: "Greet someone and record the time"
 inputs:
   who-to-greet: # id of input
     description: "Who to greet"
     required: true
     default: "World"
+outputs:
+  time: # id of output
+    description: "The time we greeted you"
 runs:
   using: "docker"
-  main: "Dockerfile"
+  image: "Dockerfile"
   args:
     - ${{ inputs.who-to-greet }}
