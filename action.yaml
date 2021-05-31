@@ -20,8 +20,8 @@ inputs:
     required: false
     default: ""
 runs:
-  using: "docker"
-  image: "Dockerfile"
+  using: "node12"
+  image: "index.js"
   args:
     - ${{ inputs.repository }}
     - ${{ inputs.head_ref }}
