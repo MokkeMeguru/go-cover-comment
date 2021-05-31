@@ -15,3 +15,5 @@ jobs:
       - name: Wake On
         uses: ./
         id: wake_on
+        with:
+          exclude-regexes: ""
