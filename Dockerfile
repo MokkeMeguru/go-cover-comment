@@ -1,7 +1,5 @@
 FROM ubuntu:latest
 
-# アクションのリポジトリからコードファイルをコンテナのファイルシステムパス `/`にコピー
-COPY entrypoint.sh /entrypoint.sh
+COPY app /
 
-# dockerコンテナが起動する際に実行されるコードファイル (`entrypoint.sh`)
-ENTRYPOINT ["/entrypoint.sh"]
+ENTRYPOINT ["/scripts/entrypoint.sh"]
