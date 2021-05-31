@@ -7,7 +7,7 @@ exec 1> >(
 
 echo "Welcome to Go Coverage Commenter"
 
-sh ./coverage.sh
+# sh ./coverage.sh
 
 echo "finish:"
 
