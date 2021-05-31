@@ -5,12 +5,12 @@ branding:
   icon: "aperture"
   color: "blue"
 inputs:
-  exclude-regexes:
-    description: "exclude-regexes separated by space"
-    required: false
-    default: ""
+  who-to-greet: # id of input
+    description: "Who to greet"
+    required: true
+    default: "World"
 runs:
   using: "docker"
   main: "Dockerfile"
   args:
-    - ${{ inputs.exclude-regexes }}
+    - ${{ inputs.who-to-greet }}

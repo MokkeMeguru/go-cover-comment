@@ -16,4 +16,4 @@ jobs:
         uses: ./
         id: wake_on
         with:
-          exclude-regexes: ""
+          who-to-greet: "Mona the Octocat"
