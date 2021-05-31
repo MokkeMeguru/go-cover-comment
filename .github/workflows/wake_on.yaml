@@ -7,6 +7,8 @@ jobs:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
+      - name: ls
+        run: ls -la
       - name: Wake On
         uses: ./
         id: wake_on
