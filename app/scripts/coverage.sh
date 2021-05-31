@@ -30,8 +30,8 @@ go tool cover -func cover.out -o cover.tsv
 
 # formatted coverage
 echo $(git diff HEAD origin/$3 --name-only)
-python ${script_source}/coverage/coverage_stats.py $(git diff HEAD origin/$3 --name-only) --repo $1 --commit_hash $commit_hash
-python ${script_source}/coverage/coverage_details.py $(git diff HEAD origin/$3 --name-only) --repo $1 --commit_hash $commit_hash
+python ${script_source}/coverage_stats.py $(git diff HEAD origin/$3 --name-only) --repo $1 --commit_hash $commit_hash
+python ${script_source}/coverage_details.py $(git diff HEAD origin/$3 --name-only) --repo $1 --commit_hash $commit_hash
 
 cat coverage_d.md >>coverage.md
 cat coverage.md
