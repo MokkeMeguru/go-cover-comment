@@ -6,6 +6,15 @@ branding:
   icon: "aperture"
   color: "blue"
 inputs:
+  repository:
+    required: true
+    default: ${{ github.repository }}
+  base_ref:
+    required: true
+    default: ${{ github.base_ref }}
+  head_ref:
+    required: true
+    default: ${{ github.head_ref }}
   exclude-regrexes:
     description: "exclude regrex spareted with space"
     required: false
@@ -14,7 +23,7 @@ runs:
   using: "docker"
   image: "Dockerfile"
   args:
-    - ${{ github.repository }}
-    - ${{ github.head_ref }}
-    - ${{ github.base_ref }}
+    - ${{ inputs.repository }}
+    - ${{ inputs.base_ref }}
+    - ${{ inputs.head_ref }}
     - ${{ inputs.exclude-regrexes }}
