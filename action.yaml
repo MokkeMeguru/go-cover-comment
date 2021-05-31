@@ -12,5 +12,3 @@ inputs:
 runs:
   using: "docker"
   main: "Dockerfile"
-  args:
-    - ${{ inputs.exclude-regexes }}
