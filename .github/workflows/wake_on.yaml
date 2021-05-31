@@ -15,3 +15,8 @@ jobs:
       - name: Wake On
         uses: ./
         id: wake_on
+        with:
+          repository: ${{ github.repository }}
+          head_ref: ${{ github.head_ref }}
+          base_ref: ${{ github.base_ref }}
+          exclude-regrexes: ""

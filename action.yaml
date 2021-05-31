@@ -9,12 +9,12 @@ inputs:
   repository:
     required: true
     default: ${{ github.repository }}
-  base_ref:
-    required: true
-    default: ${{ github.base_ref }}
   head_ref:
     required: true
     default: ${{ github.head_ref }}
+  base_ref:
+    required: true
+    default: ${{ github.base_ref }}
   exclude-regrexes:
     description: "exclude regrex spareted with space"
     required: false
@@ -24,6 +24,6 @@ runs:
   image: "Dockerfile"
   args:
     - ${{ inputs.repository }}
-    - ${{ inputs.base_ref }}
     - ${{ inputs.head_ref }}
+    - ${{ inputs.base_ref }}
     - ${{ inputs.exclude-regrexes }}
