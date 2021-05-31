@@ -1,0 +1,5 @@
+#+TITLE: Dev Notes
+* Local Test
+- the library Act (github@nektos/act) is so good.
+
+    installation: https://github.com/nektos/act

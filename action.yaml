@@ -1,0 +1,15 @@
+name: "Go Coverage Commenter"
+description: "Put the coverage comment in your golang project's PR"
+inputs:
+  exclude-regexes:
+    description: "exclude-regexes separated by space"
+    required: false
+    default: ""
+runs:
+  using: "docker"
+  image: "dockerfile"
+  args:
+    - ${{ inputs.exclude-regexes }}
+branding:
+  icon: "book"
+  color: "blue"
