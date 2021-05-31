@@ -15,5 +15,3 @@ jobs:
       - name: Wake On
         uses: ./
         id: wake_on
-        with:
-          who-to-greet: "Mona the Octocat"
