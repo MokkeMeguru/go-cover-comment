@@ -1,6 +1,7 @@
 FROM ubuntu:latest
 ENV PATH $PATH:/usr/local/go/bin
 ENV GOPATH /root/go
+ENV GOROOT /usr/local/go
 RUN mkdir /root/go
 RUN apt-get update -y -q && \
     apt-get install -y -q bash git python3 wget
