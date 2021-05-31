@@ -8,3 +8,11 @@ exec 1> >(
 
 echo "Welcome to Go Coverage Commenter"
 
+
+api_url="https://pokeapi.co/api/v2/pokemon/128"
+echo $api_url
+
+pokemon_name=$(curl "${api_url}" | jq ".name")
+echo $pokemon_name
+
+echo "::set-output name=pokemon_name::$pokemon_name"

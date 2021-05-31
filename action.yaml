@@ -5,6 +5,9 @@ inputs:
     description: "exclude-regexes separated by space"
     required: false
     default: ""
+outputs:
+  pokemon_name:
+    description: "Name of pokemon"
 runs:
   using: "docker"
   image: "Dockerfile"
