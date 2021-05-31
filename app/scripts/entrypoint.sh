@@ -2,7 +2,7 @@
 
 echo "Welcome to Go Coverage Commenter"
 
-sh ./coverage.sh
+sh /scripts/coverage.sh
 
 echo "finish:"
 
