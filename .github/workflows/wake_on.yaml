@@ -18,4 +18,3 @@ jobs:
         uses: ./
         id: wake_on
         with:
-          exclude-regexes: "hello nice to meet you"
