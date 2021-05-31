@@ -22,8 +22,3 @@ inputs:
 runs:
   using: "node12"
   image: "index.js"
-  args:
-    - ${{ inputs.repository }}
-    - ${{ inputs.head_ref }}
-    - ${{ inputs.base_ref }}
-    - ${{ inputs.exclude-regrexes }}
