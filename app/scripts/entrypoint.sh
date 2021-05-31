@@ -2,7 +2,7 @@
 
 echo "Welcome to Go Coverage Commenter"
 
-sh /scripts/coverage.sh ${{ github.repository }} ${{ github.head_ref }} ${{ github.base_ref }}
+sh /scripts/coverage.sh $1 $2 $3
 cat coverage.md
 
 echo "finish:"
