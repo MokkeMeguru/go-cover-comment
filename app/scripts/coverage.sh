@@ -23,7 +23,7 @@ git fetch origin $3
 
 commit_hash=$(git rev-parse HEAD)
 
-echo $(which go)
+echo "$(go version)"
 # run raw test coverage
 go test ./internal/... -coverprofile=cover.out.tmp
 cat cover.out.tmp | grep -v "gen.go" >cover.out
